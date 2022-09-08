@@ -52,6 +52,10 @@ write.csv(bind_df, file = "./*_ratio.csv")
 #Or save the dataframe as rda file under the directory#
 save(bind_df, file = "./*_ratio.rda")
 
+##============ Bind all injected (or scrambled) measurement dfs as one injected df (or scrambled df) ============## 
+df_1 <- read.csv("./*_ratio.csv")
+df_2 <- read.csv("./*_ratio.csv")
+yourdf <- rbind(df_1, df_2)
 
 ##============ Group by experimental conditions ============##
 #!!!!!!Remember to change "yourdf" to your dataframe names!!!!!!#
