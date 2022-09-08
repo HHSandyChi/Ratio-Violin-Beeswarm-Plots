@@ -23,6 +23,7 @@ filelist <- list.files(pattern = "*.csv")
 input <- lapply(filelist, read.csv)
 
 ##============ Calculate ratio ============##
+## For each measurement csv files ##
 #Bind all the dataframes in the list by row#
 df <- rbindlist(input)
 #Migrated distance data is in odds rows, seperate these rows as another dataframe#
